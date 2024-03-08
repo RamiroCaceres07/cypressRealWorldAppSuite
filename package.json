@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "my-server -p 3030",
-    "cy:run": "cypress run",
-    "test": "start-server-and-test start http://localhost:3030 cy:run"
+    "cypress:open": "cypress open",
+    "cypress:runDefault":"cypress run --spec cypress/e2e/test cases/*.cy.js",
+    "cypress:chrome":"cypress run --browser chrome --spec /e2e/test cases/*.cy.js"
   },
   "author": "",
   "license": "ISC",
