@@ -1,7 +1,6 @@
 class NewTransactionPage {
     elements = {
         searchUserInput : () => cy.get('[data-test=user-list-search-input]'),
-        customerName : () => cy.get('.MuiListItemText-primary'), //Kaylin Homenick
         customerData : () => cy.get('span[class="MuiGrid-root MuiGrid-item"]').contains('Tavares_Barrows')        ,
         amountInput : () => cy.get('#amount'),
         transactionDescriptionInput : () => cy.get('#transaction-create-description-input'),
@@ -16,14 +15,14 @@ class NewTransactionPage {
     }
 
     checkTheUserIsFound(username){
-       return this.elements.customerName().should('contains.text', username);
+       return this.elements.customerData().should('contains.text', username);
     }
 
     clickOnCustomer(){
         this.elements.customerData().click();
     }
 
-    insertAmoutToPay(amount){
+    insertAmountToPay(amount){
         this.elements.amountInput().clear().type(amount);
     }
 
