@@ -14,7 +14,9 @@ class HomePage {
         this.elements.usernameCheckerElement().should('have.text', username);
     }
 
-
+    clickOnNewTranctionButton(){
+        this.elements.newTransactionButtonElement().click();
+    }
 }
 
 export default HomePage;
